@@ -1,0 +1,154 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(to bottom right, #379AD2, #d2bfe8);
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+    font-family: 'Lato', sans-serif;
+}
+
+.signin-stor, .signup-stor{
+    width: 60%;
+}
+.main{
+    margin: 0 auto;
+    display: flex;
+    background-color: white;
+    box-shadow: 5px 5px 10px gray;
+    height: 70vh;
+}
+
+.main .left, .right{
+    padding: 5px;
+    width: 50%;
+}
+
+.main .right{
+    background-image: linear-gradient(rgba(108, 39, 160, 0.477), rgba(171, 148, 208, 0.51)),
+    url(../img/creations-form.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.main .right h1{
+    margin-top: 50px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.main .right p{
+    color: #f5ecff;
+    font-size: 18px;
+    font-family: 'Arima', cursive;
+}
+.main .left{
+    display: flex;
+    align-items: center;
+}
+.main .left .left-box .line{
+   
+    height: 40px;
+    background-color: #5DA2D7;
+    width: 100%;
+}
+.main .left-box{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+
+.main .left-box h1{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.signin-form, .signup-form {
+    display: inline-block;
+
+}
+
+.signin-form input, button , .signup-form input, button{
+    padding: 5px;
+}
+
+.signin-form input, .signup-form input{
+    margin: 8px;
+    border-radius: 25px;
+    border: 0px;
+    padding: 10px;
+    width: 80%;
+}
+
+.signin-form input, .signup-form input[type=text]{
+    background-color: #EBEBEB;
+}
+.signin-form input[type=password], .signup-form input[type=password]{
+    background-color: #D9D9D9;
+}
+
+.signin-form button, .signup-form button{
+    background-color: #C2E4FF;
+    border: 0px;
+    width: 5rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.signin-form button:hover, .signup-form button:hover{
+    background-color: #5DA2D7;
+    transition: all 1s;
+}
+
+.signup button, .signin button{
+    background-color: #379AD2;
+    color: #ffffff;
+    border: 0;
+    display: inline-block;
+    padding: 10px;
+    width: 7rem;
+}
+
+.signup button:hover, .signin button:hover{
+    background-color: #C2E4FF;
+    color: #000000;
+    transition: all 0.5s;
+}
+::placeholder{
+    color: #379AD2;
+}
+
+@media (max-width: 900px) {
+    .main{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin: 20px 0px;
+        height: fit-content;
+    }
+    .left{
+        height: 70vh;
+    }
+    .right{
+        height: 30vh;
+    }
+    .main .left, .right{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
