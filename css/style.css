@@ -1,16 +1,19 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(to bottom right, #379AD2, #d2bfe8);
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+    background-image: linear-gradient(to bottom right, #379AD2, #d2bfe8);
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1 1 50%;
-    font-family: 'Lato', sans-serif;
+    height: 100%;
 }
-
 .signin-stor, .signup-stor{
     width: 60%;
 }
@@ -150,5 +153,47 @@ body{
         padding: 0px;
         margin: 0px;
     }
+    .wrapper{
+        height: 120vh;
+    }
 }
 
+/* index page */
+nav{
+    height: 50px;
+    background-image: linear-gradient(to right, #379AD2, #d2bfe8);
+   
+}
+
+nav .nav-main{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.nav-main .nav-main-logo{
+    margin: 15px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-main ul li a{
+    padding: 5px;
+    margin-right: 20px;
+    color: #000000;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+}
+
+.nav-main ul li a:hover{
+    background-color: #ffffff;
+    transition: all 0.5s;
+}

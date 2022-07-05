@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="wrapper">
     <div class="signup-stor">
     <section class="main">
             <section class="left">
@@ -20,11 +21,11 @@
                     <h1>Sign Up</h1> 
                     <div class="signup-form">
                         <form action="includes/signup.inc.php" method="post">
-                            <input type="text" name="uid" placeholder="Create an username">
+                            <input type="text" name="username" placeholder="Create an username">
                             <input type="text" name="name" placeholder="Full name">
                             <input type="password" name="pwd" placeholder="Password">
-                            <input type="password" name="pwdrepeat" placeholder="Password">
-                            <button type="submit" name="submit">Login</button>
+                            <input type="password" name="pwdrepeat" placeholder="Repeat password">
+                            <button type="submit" name="submit">Submit</button>
                         </form>
                     </div>
                     <div class="signin">
@@ -38,5 +39,6 @@
             </section>
     </section>
     </div>
+</div>
 </body>
 </html>

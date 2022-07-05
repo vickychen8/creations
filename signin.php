@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="wrapper">
     <div class="signin-stor">
     <section class="main">
             <section class="left">
@@ -20,7 +21,7 @@
                     <h1>Sign In</h1> 
                     <div class="signin-form">
                         <form action="includes/signin.inc.php" method="post">
-                            <input type="text" name="uid" placeholder="Username">
+                            <input type="text" name="username" placeholder="Username">
                             <input type="password" name="pwd" placeholder="Password">
                             <button type="submit" name="submit">Login</button>
                         </form>
@@ -36,6 +37,7 @@
             <p>Store your works of art in one site</p>
             </section>
     </section>
+    </div>
     </div>
 </body>
 </html>
