@@ -6,6 +6,11 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+/*
+*{
+    border: 1px solid red;
+}
+*/
 .wrapper{
     background-image: linear-gradient(to bottom right, #379AD2, #d2bfe8);
     display: flex;
@@ -196,4 +201,33 @@ nav a{
 .nav-main ul li a:hover{
     background-color: #ffffff;
     transition: all 0.5s;
+}
+
+.instr, .icon{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.gallery{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color:#DFF1FF;
+    height: 100vh;
+}
+
+.gallery h2{
+    font-weight: 200;
+    padding: 15px;
+}
+
+.gallery-img{
+    height: 80px;
+  
+   
+
 }

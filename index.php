@@ -23,8 +23,44 @@
     <div class="icon">
 
     </div>
-    <div class="gallery">
-        <h2>Gallery</h2>
+    <!--
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit" name="submit">UPLOAD</button>
+    </form>
+    -->
+    <div class="upload">
+        <form action="includes/upload.inc.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Image title">
+            <input type="file" name="img">
+            <button type="submit" name="submit">Upload</button>
+        </form>
     </div>
+    <section class="gallery">
+        <h2>Gallery</h2>
+       
+        <div class="gallery-container">
+            <?php
+                include_once 'includes/dbh.inc.php';
+                $sql = "SELECT * FROM gallery ORDER BY sort DESC";
+                $pstmt = mysqli_stmt_init($conn);
+                if(!mysqli_stmt_prepare($pstmt, $sql)){
+                    header("location: index.php?error=success");
+                } else{
+                    mysqli_stmt_execute($pstmt);
+                    $result = mysqli_stmt_get_result($pstmt);
+
+                    while($row = mysqli_fetch_assoc($result)){
+                        echo '
+                        <div class="gallery-img" style="background-image: url(uploads/'.$row["fullname"].');"></div>
+                      
+                        <h3>'.$row["title"].'</h3>
+                        ';
+                        
+                    }
+                }
+            ?>
+        </div>
+</section>
 </body>
 </html>

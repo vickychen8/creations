@@ -14,7 +14,7 @@ function createUser($conn, $name, $username, $pwd){
     mysqli_stmt_execute($pstmt);
     mysqli_stmt_close($pstmt);
 
-    header("location: ../signup.php?error=none");
+    header("location: ../signin.php?error=none");
     exit();
 
 }
