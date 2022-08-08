@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['useruid'])){
+    header("location: signin.php");
+    die("Please login");
+}
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +21,14 @@
                 <a href="index.php">CREATIONS</a>
             </div>
             <ul>
-                <li><a href="signout.php">Sign Out</a></li>
+                <li>
+                    <!--
+                    <a href="includes/logout.inc.php">Sign Out</a>
+                    -->
+                    <form action="includes/logout.inc.php" method="post">
+                        <button type="submit" name="logout">Log Out</button>
+                    </form>
+                </li>
             </ul>
         </div>
     </nav>
