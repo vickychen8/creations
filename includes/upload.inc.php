@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])){
+    session_start();
     require_once 'dbh.inc.php';
    
     $file = $_FILES['img'];
@@ -36,14 +37,14 @@ if (isset($_POST['submit'])){
                     $result = mysqli_stmt_get_result($pstmt);
                     $rowCount = mysqli_num_rows($result);
                     $imgSort = $rowCount + 1;
-
-                    $sql = "INSERT INTO gallery (title, fullname, sort) VALUES (?, ?, ?);";
+                    $currentUserId =  $_SESSION["userid"];
+                    $sql = "INSERT INTO gallery (userid, title, fullname, sort) VALUES (?, ?, ?, ?);";
                     if(!mysqli_stmt_prepare($pstmt, $sql)){
                         header("location: ../index.php?error=stmtfailed");
                         exit();
                     } else {
                         
-                        mysqli_stmt_bind_param($pstmt, "sss", $fileTitle, $fileIdName, $imgSort);
+                        mysqli_stmt_bind_param($pstmt, "ssss", $currentUserId, $fileTitle, $fileIdName, $imgSort);
                         mysqli_stmt_execute($pstmt);
                        
                         move_uploaded_file($fileTmpName, $fileDest);

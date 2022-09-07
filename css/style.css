@@ -11,6 +11,7 @@ body{
     border: 1px solid red;
 }
 */
+
 .wrapper{
     background-image: linear-gradient(to bottom right, #379AD2, #d2bfe8);
     display: flex;
@@ -115,6 +116,7 @@ body{
     padding: 10px;
 }
 
+
 .signin-form button:hover, .signup-form button:hover{
     background-color: #5DA2D7;
     transition: all 1s;
@@ -196,6 +198,7 @@ nav a{
     color: #000000;
     border: 1px solid #ffffff;
     font-size: 16px;
+    background-color: #E9E6F6;
 }
 
 .nav-main ul li a:hover{
@@ -203,31 +206,83 @@ nav a{
     transition: all 0.5s;
 }
 
-.instr, .icon{
-    text-align: center;
+.instr{
+    padding-top: 20px;
 }
 
-form{
+.instr h1{
     text-align: center;
-    margin: 0 auto;
+    font-weight: 500;
+    font-family: 'Arima', cursive;
 }
+
+.upload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/dizzy-designer.png), url(../img/pablita-670.png);
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:15% 0, 85% 0;
+}
+
+.upload form{
+    background-color: #5DA2D7;
+    border-radius: 50px;
+    padding: 10px;
+}
+
 
 .gallery{
+    min-height: 100px;
+    overflow: hidden;
     width: 85%;
     margin: 0 auto;
-    margin-top: 10px;
     background-color:#DFF1FF;
-    height: 100vh;
+    padding: 0 25px;
 }
 
 .gallery h2{
     font-weight: 200;
+}
+.gallery h3{
+    font-weight: 200;
     padding: 15px;
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+    text-align: center;
 }
 
-.gallery-img{
-    height: 80px;
-  
-   
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 15px;
+    align-items: center;
+    
+}
 
+.gallery-container .gallery-container-box .gallery-box-img{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-width: 100%;
+    height: 250px;
+   ;
+}
+
+
+@media (min-width: 481px) and (max-width: 967px) {
+    .upload {
+        background-image: url(../img/dizzy-designer.png);
+        background-position: center;
+    }
+}
+
+ /* Media Query for Tablets Ipads portrait mode */
+ @media (min-width: 968px) and (max-width: 1124px){
+    .upload {
+        background-position: 1% 0, 99% 0;
+    }
 }
