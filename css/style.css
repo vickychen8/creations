@@ -212,7 +212,8 @@ nav a{
 
 .instr h1{
     text-align: center;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 100;
     font-family: 'Arima', cursive;
 }
 
@@ -269,6 +270,7 @@ nav a{
     background-position: center;
     max-width: 100%;
     height: 250px;
+    margin: 0rem;
    ;
 }
 
@@ -285,4 +287,13 @@ nav a{
     .upload {
         background-position: 1% 0, 99% 0;
     }
+}
+
+.gallery-container-box form{
+    
+    margin: 0rem;
+}
+.gallery-container-box form button{
+    color: red;
+    
 }

@@ -72,10 +72,24 @@ if(!isset($_SESSION['useruid'])){
                         if($row["userid"] == $_SESSION["userid"]){
                         echo '
                         <div class="gallery-container-box">
+                            <form action="includes/delete.inc.php" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" value="'.$row["id"].'" name="deleteFile">
+                                <input type="hidden" value="'.$row["fullname"].'" name="filePath">
+                                <button type="submit" name="delete">X</button>
+                            </form>
                             <a href="#">
-                            <div class="gallery-box-img" style="background-image: url(uploads/'.$row["fullname"].');"></div>
+                            <div class="gallery-box-img" style="background-image: url(uploads/'.$row["fullname"].');">
+                            </div>
+
                             </a>
                             <h3>'.$row["title"].'</h3>
+                            <h1>'.$row["id"].'</h1>
+                           
+
+                            
+                                
+                                
+                       
                         </div>
                         ';
                         }
